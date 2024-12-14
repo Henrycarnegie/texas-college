@@ -16,7 +16,7 @@
         "APP_ENV": "production",
         "APP_DEBUG": "false",
         "APP_URL": "https://yourprojectdomain.com"
-      },
-      "buildCommand": "php bin/composer.phar install && npm install && npm run build"
-    }
+      }
+    },
+    "buildCommand": "php bin/composer.phar install && npm install && npm run build"
   }
