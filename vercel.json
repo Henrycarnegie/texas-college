@@ -11,15 +11,16 @@
         "dest": "/api/index.php"
       }
     ],
-    "build": [
+    "build": {
+      "env": {
+        "APP_ENV": "production",
+        "APP_DEBUG": "false",
+        "APP_URL": "https://yourprojectdomain.com"
+      },
+      "commands": [
         "php bin/composer.phar install",
         "npm install",
         "npm run build"
-    ],
-    "env": {
-      "APP_KEY": "base64:RlHgIocnws6UAu6uImAAyN06fO7NIVaFHgvS99Mlnj0=",
-      "APP_ENV": "production",
-      "APP_DEBUG": "false",
-      "APP_URL": "https://yourprojectdomain.com"
+      ]
     }
-}
+  }
