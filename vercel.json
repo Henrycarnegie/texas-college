@@ -1,0 +1,13 @@
+{
+    "build": {
+      "env": {
+        "COMPOSER_ALLOW_SUPERUSER": "1"
+      },
+      "commands": [
+        "curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer",
+        "composer install",
+        "npm install",
+        "npm run build"
+      ]
+    }
+  }
