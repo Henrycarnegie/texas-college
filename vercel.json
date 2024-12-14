@@ -2,7 +2,7 @@
     "version": 2,
     "functions": {
       "api/index.php": {
-        "runtime": "vercel-php@0.8.0"
+        "runtime": "vercel-php@0.6.0"
       }
     },
     "routes": [
@@ -16,11 +16,7 @@
         "APP_ENV": "production",
         "APP_DEBUG": "false",
         "APP_URL": "https://yourprojectdomain.com"
-      },
-      "commands": [
-        "php bin/composer.phar install",
-        "npm install",
-        "npm run build"
-      ]
-    }
+      }
+    },
+    "buildCommand": "php bin/composer.phar install && npm install && npm run build"
   }
