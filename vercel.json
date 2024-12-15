@@ -5,8 +5,7 @@
             "runtime": "vercel-php@0.7.0"
         }
     },
-    "installCommand": "curl -sS https://getcomposer.org/installer | php -- --install-dir=/tmp",
-    "buildCommand": "/tmp/composer install && npm install",
+    "installCommand": "composer install",
     "routes": [
     {
         "src": "/(favicon\\.ico|robots\\.txt)",
