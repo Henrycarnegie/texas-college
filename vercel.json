@@ -6,7 +6,8 @@
             "includeFiles": "vendor/**"
         }
     },
-    "installCommand": "curl -sS https://getcomposer.org/installer | php -- --install-dir=/tmp && /tmp/composer install && npm install",
+    "installCommand": "curl -sS https://getcomposer.org/installer | php -- --install-dir=/tmp",
+    "buildCommand": "/tmp/composer install && npm install",
     "routes": [
     {
         "src": "/(favicon\\.ico|robots\\.txt)",
