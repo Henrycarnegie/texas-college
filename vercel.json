@@ -20,8 +20,6 @@
         "dest": "/api/index.php"
     }
     ],
-    "installCommand": "composer install && npm install",
-    "buildCommand": "npm run build",
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "true",
