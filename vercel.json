@@ -2,7 +2,7 @@
     "version": 2,
     "functions": {
         "api/*.php": {
-        "runtime": "vercel-php@0.7.3"
+            "runtime": "vercel-php@0.7.3"
         }
     },
     "routes": [
@@ -11,6 +11,7 @@
             "dest": "/api/index.php"
         }
     ],
+    "installCommand": "composer install",
     "env": {
         "SESSION_DRIVER": "cookie",
         "CACHE_DRIVER": "database",
