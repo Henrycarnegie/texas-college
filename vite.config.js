@@ -10,6 +10,5 @@ export default defineConfig({
             input: ['resources/sass/app.scss', 'resources/js/app.js'],
             refresh: true,
         }),
-        vercel(),
     ],
 })
