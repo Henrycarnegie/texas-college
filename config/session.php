@@ -60,7 +60,11 @@ return [
     |
     */
 
-    'files' => storage_path('framework/sessions'),
+    'file' => [
+        'driver' => 'file',
+        'path' => env('SESSION_PATH', storage_path('framework/sessions')),
+    ],
+
 
     /*
     |--------------------------------------------------------------------------
