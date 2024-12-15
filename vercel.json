@@ -2,8 +2,7 @@
     "version": 2,
     "functions": {
         "api/index.php": {
-            "runtime": "vercel-php@0.7.0",
-            "includeFiles": "vendor/**"
+            "runtime": "vercel-php@0.7.0"
         }
     },
     "installCommand": "curl -sS https://getcomposer.org/installer | php -- --install-dir=/tmp",
