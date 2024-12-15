@@ -20,8 +20,13 @@
         "dest": "/api/index.php"
       }
     ],
-    "installCommand": "composer install && npm install",
-    "buildCommand": "npm run build",
+    
+    "builds": [
+        {
+        "src": "index.php",
+        "use": "@vercel/php"
+        }
+    ],
     "env": {
       "APP_ENV": "production",
       "APP_DEBUG": "true",
@@ -29,6 +34,9 @@
       "CACHE_DRIVER": "array",
       "LOG_CHANNEL": "stderr",
       "SESSION_DRIVER": "cookie",
-      "APP_KEY": "your-app-key"
+      "APP_KEY": "your-app-key",
+      "PHP_VERSION": "8.1",
+      "COMPOSER_HOME": "/tmp/composer",
+      "NODE_VERSION": "18.x"
     }
   }
