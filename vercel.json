@@ -6,30 +6,18 @@
         "includeFiles": "vendor/**"
       }
     },
-    "routes": [
+    "builds": [
       {
-        "src": "/(favicon\\.ico|robots\\.txt)",
-        "dest": "/public/$1"
-      },
-      {
-        "src": "/build/(.*)",
-        "dest": "/public/build/$1"
-      },
-      {
-        "src": "/(.*)",
-        "dest": "/api/index.php"
+        "src": "public/**/*",
+        "use": "@vercel/static"
       }
     ],
-    "buildCommand": "curl -sS https://getcomposer.org/installer | php -- --install-dir=/tmp && php /tmp/composer.phar install",
+    "buildCommand": "curl -sS https://getcomposer.org/installer | php -- --install-dir=/tmp && php /tmp/composer.phar install && npm install && npm run build",
     "installCommand": "composer install && npm install",
     "env": {
       "APP_ENV": "production",
       "APP_DEBUG": "true",
       "APP_URL": "https://yourproductionurl.com",
-      "CACHE_DRIVER": "array",
-      "LOG_CHANNEL": "stderr",
-      "SESSION_DRIVER": "cookie",
-      "APP_KEY": "your-app-key",
       "PHP_VERSION": "8.1",
       "COMPOSER_HOME": "/tmp/composer",
       "NODE_VERSION": "18.x"
