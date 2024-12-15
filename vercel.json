@@ -27,6 +27,8 @@
 
         "VIEW_COMPILED_PATH": "/tmp",
         "SSR_TEMP_PATH": "/tmp/ssr",
+        "COMPOSER_HOME": "/tmp/composer",
+        "PHP_VERSION": "8.2",
         "NODE_PATH": "node"
     }
 }
