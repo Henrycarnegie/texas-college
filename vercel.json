@@ -6,12 +6,6 @@
         "includeFiles": "vendor/**"
       }
     },
-    "builds": [
-      {
-        "src": "public/**/*",
-        "use": "@vercel/static"
-      }
-    ],
     "buildCommand": "curl -sS https://getcomposer.org/installer | php -- --install-dir=/tmp && php /tmp/composer.phar install && npm install && npm run build",
     "installCommand": "composer install && npm install",
     "env": {
