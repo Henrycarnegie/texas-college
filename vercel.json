@@ -20,8 +20,8 @@
         "dest": "/api/index.php"
     }
     ],
+    "installCommand": "composer install && npm install",
     "buildCommand": "npm run build",
-    "installCommand": "curl -sS https://getcomposer.org/installer | php -- --install-dir=/tmp && php /tmp/composer.phar install && npm install",
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "true",
