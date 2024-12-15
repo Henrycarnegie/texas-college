@@ -19,16 +19,5 @@
         "src": "/(.*)",
         "dest": "/api/index.php"
     }
-    ],
-    "env": {
-        "APP_ENV": "production",
-        "APP_DEBUG": "true",
-        "APP_URL": "https://yourproductionurl.com",
-        "CACHE_DRIVER": "array",
-        "LOG_CHANNEL": "stderr",
-        "SESSION_DRIVER": "cookie",
-        "PHP_VERSION": "8.2",
-        "COMPOSER_HOME": "/tmp/composer",
-        "NODE_VERSION": "18.x"
-    }
+    ]
 }
