@@ -1,23 +1,13 @@
 {
     "version": 2,
-    "functions": {
-        "api/index.php": {
-            "runtime": "vercel-php@0.7.0"
-        }
+    "builds": {
+        "api/index.php": { "runtime": "vercel-php@0.7.0" }
     },
     "installCommand": "composer install",
     "routes": [
-    {
-        "src": "/(favicon\\.ico|robots\\.txt)",
-        "dest": "/public/$1"
-    },
-    {
-        "src": "/build/(.*)",
-        "dest": "/public/build/$1"
-    },
-    {
-        "src": "/(.*)",
-        "dest": "/api/index.php"
-    }
+        {
+            "src": "/(.*)",
+            "dest": "/api/index.php"
+        }
     ]
 }
