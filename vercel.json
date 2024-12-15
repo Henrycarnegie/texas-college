@@ -6,7 +6,7 @@
             "includeFiles": "vendor/**"
         }
     },
-    "installCommand": "composer install && npm install",
+    "installCommand": "composer -v && npm install",
     "routes": [
     {
         "src": "/(favicon\\.ico|robots\\.txt)",
