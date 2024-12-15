@@ -3,8 +3,8 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "postinstall": "curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer",
-        "build": "composer install && npm install && npm run build"
+        "postinstall": "curl -sS https://getcomposer.org/installer | php -- --install-dir=C:\\laragon\\bin\\composer --filename=composer",
+        "build": "composer install && npm install && vite build"
     },
     "devDependencies": {
         "@tailwindcss/forms": "^0.5",
