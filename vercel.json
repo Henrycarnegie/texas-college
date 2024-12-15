@@ -1,19 +1,36 @@
 {
     "version": 2,
     "functions": {
-      "api/index.php": {
-        "runtime": "vercel-php@0.6.1",
-        "includeFiles": "vendor/**"
-      }
+        "api/index.php": {
+            "runtime": "vercel-php@0.6.1",
+            "includeFiles": "vendor/**"
+        }
     },
-    "buildCommand": "curl -sS https://getcomposer.org/installer | php -- --install-dir=/tmp && php /tmp/composer.phar install && npm install",
-    "installCommand": "composer install && npm install",
-    "env": {
-      "APP_ENV": "production",
-      "APP_DEBUG": "true",
-      "APP_URL": "https://yourproductionurl.com",
-      "PHP_VERSION": "8.1",
-      "COMPOSER_HOME": "/tmp/composer",
-      "NODE_VERSION": "18.x"
+    "routes": [
+    {
+        "src": "/(favicon\\.ico|robots\\.txt)",
+        "dest": "/public/$1"
+    },
+    {
+        "src": "/build/(.*)",
+        "dest": "/public/build/$1"
+    },
+    {
+        "src": "/(.*)",
+        "dest": "/api/index.php"
     }
-  }
+    ],
+    "buildCommand": "npm run build",
+    "installCommand": "curl -sS https://getcomposer.org/installer | php -- --install-dir=/tmp && php /tmp/composer.phar install && npm install",
+    "env": {
+        "APP_ENV": "production",
+        "APP_DEBUG": "true",
+        "APP_URL": "https://yourproductionurl.com",
+        "CACHE_DRIVER": "array",
+        "LOG_CHANNEL": "stderr",
+        "SESSION_DRIVER": "cookie",
+        "PHP_VERSION": "8.1",
+        "COMPOSER_HOME": "/tmp/composer",
+        "NODE_VERSION": "18.x"
+    }
+}
