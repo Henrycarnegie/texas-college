@@ -21,7 +21,7 @@
       }
     ],
     "installCommand": "composer install && npm install",
-    "buildCommand": "npm run build",
+    "buildCommand": "curl -sS https://getcomposer.org/installer | php -- --install-dir=/tmp && php /tmp/composer.phar install && npm install && npm run build",
     "env": {
       "APP_ENV": "production",
       "APP_DEBUG": "true",
