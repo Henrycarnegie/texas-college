@@ -10,5 +10,23 @@
             "src": "/(.*)",
             "dest": "/api/index.php"
         }
-    ]
+    ],
+    "env": {
+        "SESSION_DRIVER": "cookie",
+        "CACHE_DRIVER": "database",
+        "LOG_CHANNEL": "stderr",
+
+        "APP_ENV": "production",
+        "APP_KEY": "base64:RlHgIocnws6UAu6uImAAyN06fO7NIVaFHgvS99Mlnj0=",
+        "APP_DEBUG": "true",
+        "APP_CONFIG_CACHE": "/tmp/config.php",
+        "APP_EVENTS_CACHE": "/tmp/events.php",
+        "APP_PACKAGES_CACHE": "/tmp/packages.php",
+        "APP_ROUTES_CACHE": "/tmp/routes.php",
+        "APP_SERVICES_CACHE": "/tmp/services.php",
+
+        "VIEW_COMPILED_PATH": "/tmp",
+        "SSR_TEMP_PATH": "/tmp/ssr",
+        "NODE_PATH": "node"
+    }
 }
